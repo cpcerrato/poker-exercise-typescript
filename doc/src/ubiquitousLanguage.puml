@@ -1,0 +1,53 @@
+@startuml ubiquitousLanguage
+class Poker
+class HandSolver
+class Card
+class CardValue
+class A
+class 2
+class 3
+class 4
+class 5
+class 6
+class 7
+class 8
+class 9
+class T
+class J
+class Q
+class K
+
+class Suit
+class s
+class h
+class c
+class d
+class Hand
+class HandRank
+
+Poker *--> HandSolver
+HandSolver ..> "2" Hand
+Hand *--> "5" Card
+Hand *--> HandRank
+Card *--> "1" Suit
+Suit <|-- s
+Suit <|-- h
+Suit <|-- c
+Suit <|-- d
+
+CardValue <|-- A
+CardValue <|-- 2
+CardValue <|-- 3
+CardValue <|-- 4
+CardValue <|-- 5
+CardValue <|-- 6
+CardValue <|-- 7
+CardValue <|-- 8
+CardValue <|-- 9
+CardValue <|-- T
+CardValue <|-- J
+CardValue <|-- Q
+CardValue <|-- K
+
+Card *--> "1" CardValue
+@enduml

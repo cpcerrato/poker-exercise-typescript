@@ -1,0 +1,54 @@
+{
+  "name": "poker-exercise-typescript",
+  "version": "0.0.1",
+  "description": "Poker hand solver programming exercise. Given two five card poker hands, evaluate which of the two is the higher hand, and return that highest hand as output. Given to hands with same rank it should tiebreak between them.",
+  "main": "index.js",
+  "scripts": {
+    "dev:poker:backend": "NODE_ENV=dev ts-node-dev --ignore-watch node_modules  ./src/app/poker/backend/start.ts",
+    "test": "NODE_ENV=test jest --coverage",
+    "build": "npm run build:clean && npm run build:tsc",
+    "build:tsc": "tsc",
+    "build:clean": "rm -r dist; exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpcerrato/poker-exercise-typescript.git"
+  },
+  "author": "Carlos Pérez Cerrato",
+  "license": "(ISC)",
+  "bugs": {
+    "url": "https://github.com/cpcerrato/poker-exercise-typescript/issues"
+  },
+  "homepage": "https://github.com/cpcerrato/poker-exercise-typescript#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "bodybuilder": "^2.4.0",
+    "compression": "^1.7.4",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0",
+    "glob": "^7.2.0",
+    "helmet": "^5.0.2",
+    "http-status": "^1.5.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.2",
+    "@types/express": "^4.17.13",
+    "@types/glob": "^7.2.0",
+    "@types/jest": "^27.4.1",
+    "@types/morgan": "^1.9.3",
+    "@types/supertest": "^2.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.5.1",
+    "supertest": "^6.2.2",
+    "ts-jest": "^27.1.3",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.2"
+  }
+}

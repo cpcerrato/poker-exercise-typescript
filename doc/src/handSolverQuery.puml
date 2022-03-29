@@ -1,0 +1,26 @@
+@startuml "handSolver"
+allow_mixing
+left to right direction
+legend top right
+    |<#LightBlue>    | Infrastructure |
+    |<#LightCoral>   | Application |
+    |<#Gold>  | Domain |
+endlegend
+Actor user
+rectangle HandSolverPostController #LightBlue
+rectangle HandSolverService #LightCoral
+rectangle Hand #Gold
+user ..>  HandSolverPostController
+note top on link
+<b>POST</b> /hands/solve
+{"hands": []}
+end note
+HandSolverPostController --> HandSolverService
+HandSolverService --> Hand
+
+HandSolverPostController ..> user
+note top on link
+<b>STATUS</b> 200
+{"winner": []}
+end note
+@enduml
